@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom Global Styles ===== */
+
+/* Responsive Root Font Size */
+html {
+  font-size: 14px; /* 📱 Mobile */
+  scroll-behavior: smooth;
+}
+
+/* 📲 Tablet */
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Global Font */
+body {
+  font-family: "Prompt", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
