@@ -5,16 +5,16 @@ import "swiper/css";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdArrowForwardIos } from "react-icons/md";
 
-import cat1 from "./swipperImg/cat_1.jpg";
-import cat2 from "./swipperImg/cat_2.jpg";
-import cat3 from "./swipperImg/cat_3.jpg";
-import cat4 from "./swipperImg/cat_4.jpg";
-import cat5 from "./swipperImg/cat_5.jpg";
-import cat6 from "./swipperImg/cat_6.jpg";
-import cat7 from "./swipperImg/cat_7.jpg";
-import cat8 from "./swipperImg/cat_8.jpg";
-import cat9 from "./swipperImg/cat_9.jpg";
-import cat10 from "./swipperImg/cat_10.jpg";
+import cat1 from "./SwipperImg/cat_1.jpg";
+import cat2 from "./SwipperImg/cat_2.jpg";
+import cat3 from "./SwipperImg/cat_3.jpg";
+import cat4 from "./SwipperImg/cat_4.jpg";
+import cat5 from "./SwipperImg/cat_5.jpg";
+import cat6 from "./SwipperImg/cat_6.jpg";
+import cat7 from "./SwipperImg/cat_7.jpg";
+import cat8 from "./SwipperImg/cat_8.jpg";
+import cat9 from "./SwipperImg/cat_9.jpg";
+import cat10 from "./SwipperImg/cat_10.jpg";
 
 const slides = [
   {
