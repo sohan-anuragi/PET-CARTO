@@ -9,11 +9,11 @@ import TopRated from "./TopRated";
 export default function ProductDetails() {
   return (
     <>
-      <div className=" flex flex-col md:flex-row gap-4 px-[1rem]">
-        <div className="lg:w-[33%] md:w-[50%] w-[90%] md:sticky md:top-20 self-start">
+      <div className=" flex flex-col lg:flex-row gap-4 px-[1rem]">
+        <div className="lg:w-[33%]  w-[97%] lg:sticky lg:top-20 self-start">
           <ProductSwipper />
         </div>
-        <div className="lg:w-[40%] md:w-[40%] w-[90%] ">
+        <div className="lg:w-[40%]  w-[90%] ">
           <ProductTitle />
         </div>
         <div className="lg:w-[25%]">

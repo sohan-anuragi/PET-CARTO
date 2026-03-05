@@ -50,7 +50,7 @@ export default function ProductSwipper() {
               {/* MAIN IMAGE AREA */}
               <div
                 ref={imageRef}
-                className="relative bg-gray-100 rounded-lg cursor-crosshair"
+                className="relative w-[100%] h-[100%]  bg-gray-100 rounded-lg cursor-crosshair"
                 onMouseEnter={() => setIsZoomVisible(true)}
                 onMouseLeave={() => setIsZoomVisible(false)}
                 onMouseMove={handleMouseMove}
@@ -60,7 +60,7 @@ export default function ProductSwipper() {
                   modules={[Thumbs]}
                   thumbs={{ swiper: thumbsSwiper }}
                   onSlideChange={handleSlideChange}
-                  className="w-[430px] w-[350px] h-[350px] h-[430px]"
+                  className=" w-auto h-auto "
                 >
                   {product.images.map((image, index) => (
                     <SwiperSlide key={index}>
