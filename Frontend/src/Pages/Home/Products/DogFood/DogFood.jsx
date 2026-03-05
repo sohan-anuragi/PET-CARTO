@@ -147,81 +147,93 @@ const ProductCard = ({ product }) => {
   }, [product.countdown]);
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl relative hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-      {/* Discount Badge */}
-      {product.discount > 0 && (
-        <div className="absolute top-3 right-3 bg-blue-900 text-white text-xs font-semibold px-2 py-1 rounded z-10">
-          -{product.discount}%
-        </div>
-      )}
-
-      {/* Image Section */}
-      <div
-        className="relative h-[19rem] flex items-center justify-center mb-3 overflow-hidden rounded-lg bg-gray-50"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <img
-          src={currentImage}
-          alt={product.title}
-          className="max-h-full max-w-full object-contain transition-opacity duration-300"
-        />
-
-        {/* Action Icons */}
-        <div
-          className={`absolute top-3 left-3 flex flex-col gap-2 transition-opacity duration-300 pointer-events-none ${
-            isHovered ? "opacity-100 pointer-events-auto" : "opacity-0"
-          }`}
-        >
-          <ActionIcon icon={FaHeart} label="Wishlist" />
-          <ActionIcon icon={FaCheck} label="Compare" />
-          <ActionIcon icon={FaEye} label="Quick View" />
-        </div>
-
-        {/* Countdown Timer */}
-        {product.countdown && (
-          <div
-            className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center gap-1 mb-3 transition-opacity duration-300 ${
-              isHovered ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <CountdownBox value={countdown.days} label="DAYS" isRed={false} />
-            <CountdownBox value={countdown.hours} label="HRS" isRed={false} />
-            <CountdownBox value={countdown.minutes} label="MIN" isRed={false} />
-            <CountdownBox value={countdown.seconds} label="SEC" isRed={true} />
+    <a href="/shop/simple-product">
+      <div className="bg-white border border-gray-200 rounded-xl relative hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+        {/* Discount Badge */}
+        {product.discount > 0 && (
+          <div className="absolute top-3 right-3 bg-blue-900 text-white text-xs font-semibold px-2 py-1 rounded z-10">
+            -{product.discount}%
           </div>
         )}
-      </div>
 
-      {/* Product Title */}
+        {/* Image Section */}
+        <div
+          className="relative h-[19rem] flex items-center justify-center mb-3 overflow-hidden rounded-lg bg-gray-50"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img
+            src={currentImage}
+            alt={product.title}
+            className="max-h-full max-w-full object-contain transition-opacity duration-300"
+          />
 
-      <div className="p-4">
-        <h3 className="text-gray-800 font-medium text-sm mb-2 line-clamp-2 min-h-[2.5rem]">
-          {product.title}
-        </h3>
+          {/* Action Icons */}
+          <div
+            className={`absolute top-3 left-3 flex flex-col gap-2 transition-opacity duration-300 pointer-events-none ${
+              isHovered ? "opacity-100 pointer-events-auto" : "opacity-0"
+            }`}
+          >
+            <ActionIcon icon={FaHeart} label="Wishlist" />
+            <ActionIcon icon={FaCheck} label="Compare" />
+            <ActionIcon icon={FaEye} label="Quick View" />
+          </div>
 
-        {/* Star Rating */}
-        <div className="flex items-center gap-1 mb-2">
-          <StarRating rating={product.rating} />
-        </div>
-
-        {/* Price */}
-        <div className="mb-3">
-          {product.priceRange ? (
-            <p className="text-lg font-bold text-gray-900">
-              ${product.priceRange.min} – ${product.priceRange.max}
-            </p>
-          ) : (
-            <p className="text-lg font-bold text-gray-900">${product.price}</p>
+          {/* Countdown Timer */}
+          {product.countdown && (
+            <div
+              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center gap-1 mb-3 transition-opacity duration-300 ${
+                isHovered ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <CountdownBox value={countdown.days} label="DAYS" isRed={false} />
+              <CountdownBox value={countdown.hours} label="HRS" isRed={false} />
+              <CountdownBox
+                value={countdown.minutes}
+                label="MIN"
+                isRed={false}
+              />
+              <CountdownBox
+                value={countdown.seconds}
+                label="SEC"
+                isRed={true}
+              />
+            </div>
           )}
         </div>
 
-        {/* Button */}
-        <button className="w-full py-2.5 border border-gray-300 hover:text-[white] hover:bg-[#0a0a4e] hover:bg-gray-200 text-gray-800 font-medium text-sm rounded transition-colors duration-200">
-          {product.buttonText}
-        </button>
+        {/* Product Title */}
+
+        <div className="p-4">
+          <h3 className="text-gray-800 font-medium text-sm mb-2 line-clamp-2 min-h-[2.5rem]">
+            {product.title}
+          </h3>
+
+          {/* Star Rating */}
+          <div className="flex items-center gap-1 mb-2">
+            <StarRating rating={product.rating} />
+          </div>
+
+          {/* Price */}
+          <div className="mb-3">
+            {product.priceRange ? (
+              <p className="text-lg font-bold text-gray-900">
+                ${product.priceRange.min} – ${product.priceRange.max}
+              </p>
+            ) : (
+              <p className="text-lg font-bold text-gray-900">
+                ${product.price}
+              </p>
+            )}
+          </div>
+
+          {/* Button */}
+          <button className="w-full py-2.5 border border-gray-300 hover:text-[white] hover:bg-[#0a0a4e] hover:bg-gray-200 text-gray-800 font-medium text-sm rounded transition-colors duration-200">
+            {product.buttonText}
+          </button>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
