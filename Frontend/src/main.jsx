@@ -15,6 +15,7 @@ import SignupPage from "./Pages/LoginPage/SignupPage.jsx";
 import ForgetPage from "./Pages/LoginPage/ForgetPage.jsx";
 import Wishlist from "./Pages/WishList/WishList.jsx";
 import ProductDetails from "./Pages/ProducDetails/ProductDetails.jsx";
+import AboutUs2 from "./Pages/AboutUs2/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/about-us", element: <AboutUs /> },
+      { path: "/about-us", element: <AboutUs2 /> },
       {
         path: "/blog",
         element: (
