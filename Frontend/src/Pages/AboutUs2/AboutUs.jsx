@@ -21,12 +21,12 @@ export default function AboutUs2() {
   return (
     <>
       <TopHeading />
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <AboutInfoMob />
       </div>
       <div className="hidden lg:block p-[1rem] ">
         <AboutInfoDesk />
-      </div>
+      </div> */}
       <Component2 />
       <Component3 />
       <Component4 />
@@ -37,9 +37,9 @@ export default function AboutUs2() {
       <Component9 />
       <Component10 />
       <Component11 />
-      <Component12 />
+      {/* <Component12 /> */}
       <Component13 />
-      <Component14 />
+      {/* <Component14 /> */}
       <Component15 />
     </>
   );

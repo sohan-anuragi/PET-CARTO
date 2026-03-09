@@ -19,7 +19,8 @@ export default function Home() {
         <QuickProducts />
         <WeekDealProducts />
         <FavoriteBrands />
-        <FProducts />
+        {/* <FProducts /> */}
+        <div className="h-[6rem] w-full bg-white mt-[-12rem]"></div>
         <CustomerComments />
         <TipsSwiper />
         <OurBrand />
